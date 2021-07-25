@@ -7,9 +7,9 @@ inputs:
   path:
     description: 'root package path'
     required: true
-  runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
-      - ${{ inputs.solvedac }}
-      - ${{ inputs.path }}
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.solvedac }}
+    - ${{ inputs.path }}
