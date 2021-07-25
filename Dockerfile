@@ -1,4 +1,3 @@
-FROM adoptopenjdk:11-jre
-COPY build/libs/boj-updater-1.0-SNAPSHOT.jar /build/libs/boj-updater-1.0-SNAPSHOT.jar
+FROM alpine:3.10
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
