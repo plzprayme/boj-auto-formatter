@@ -1,0 +1,15 @@
+name: 'BOJ Auto Formatter'
+description: 'GENERATE README.md'
+inputs:
+  solvedac:
+    description: 'BOJ id'
+    default: ''
+  path:
+    description: 'root package path'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.solvedac }}
+    - ${{ inputs.path }}
